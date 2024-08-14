@@ -91,24 +91,26 @@
         class="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5"
     >
         {#each sortedFilteredTeam as { name, title, committee, img, socials }}
-            <TeamCard src={img} alt="image of {name}">
-                <div>
-                    <p class="text-md m-0 md:text-lg">{name}</p>
-                    <p class="m-0 text-xs leading-tight">{title}</p>
-                </div>
-                <div class="flex flex-row flex-wrap gap-2">
-                    {#each Object.entries(socials) as [social, href]}
-                        {@const src = getSocialIcon(social)}
-                        <a {href} target="_blank"><Icon {src} class="size-5 text-csi-black dark:text-csi-white md:text-csi-white" /></a>
-                    {/each}
-                </div>
-                <div
-                    slot="tag"
-                    class="h-fit w-fit rounded-full px-3 py-1 {getCommitteeColor(committee)}"
-                >
-                    <p class="m-0 text-sm text-csi-black">{name}</p>
-                </div>
-            </TeamCard>
+            {#key sortedFilteredTeam}
+                <TeamCard src={img} alt="image of {name}">
+                    <div>
+                        <p class="text-md m-0 md:text-lg">{name}</p>
+                        <p class="m-0 text-xs leading-tight">{title}</p>
+                    </div>
+                    <div class="flex flex-row flex-wrap gap-2">
+                        {#each Object.entries(socials) as [social, href]}
+                            {@const src = getSocialIcon(social)}
+                            <a {href} target="_blank"><Icon {src} class="size-5 text-csi-black dark:text-csi-white md:text-csi-white" /></a>
+                        {/each}
+                    </div>
+                    <div
+                        slot="tag"
+                        class="h-fit w-fit rounded-full px-3 py-1 {getCommitteeColor(committee)}"
+                    >
+                        <p class="m-0 text-sm text-csi-black">{name}</p>
+                    </div>
+                </TeamCard>
+            {/key}
         {/each}
     </div>
 </section>

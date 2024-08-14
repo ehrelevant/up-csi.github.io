@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { fade } from "svelte/transition";
+    import { fade, fly } from "svelte/transition";
 
     // eslint-disable-next-line init-declarations
     export let src: string;
@@ -11,6 +11,7 @@
 <div
     class="grid-rows-[1fr auto] grid grid-cols-1 content-start items-start overflow-hidden md:aspect-square md:grid-rows-1 md:rounded-2xl md:shadow-lg"
     role="img"
+    in:fly|global = {{ x: 50, duration: 200 }}
     on:mouseenter={() => (isOverlayVisible = true)}
     on:mouseleave={() => (isOverlayVisible = false)}
 >

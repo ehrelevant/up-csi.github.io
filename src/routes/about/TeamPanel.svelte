@@ -100,7 +100,12 @@
                     <div class="flex flex-row flex-wrap gap-2">
                         {#each Object.entries(socials) as [social, href]}
                             {@const src = getSocialIcon(social)}
-                            <a {href} target="_blank"><Icon {src} class="size-5 text-csi-black dark:text-csi-white md:text-csi-white" /></a>
+                            <a {href} target="_blank"
+                                ><Icon
+                                    {src}
+                                    class="size-5 text-csi-black md:text-csi-white dark:text-csi-white"
+                                /></a
+                            >
                         {/each}
                     </div>
                     <div

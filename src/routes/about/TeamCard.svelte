@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { fade } from "svelte/transition";
+
     // eslint-disable-next-line init-declarations
     export let src: string;
     // eslint-disable-next-line init-declarations
@@ -22,12 +24,14 @@
     {#if isOverlayVisible}
         <div
             class="z-10 col-start-1 row-start-1 hidden h-full flex-col justify-end gap-2 bg-csi-black/70 p-4 text-csi-white md:flex"
+            transition:fade={{ duration: 100 }}
         >
             <slot />
         </div>
     {:else}
         <div
             class="z-10 col-start-1 row-start-1 hidden h-full w-full flex-col justify-end p-1 md:flex"
+            transition:fade={{ duration: 100 }}
         >
             <slot name="tag" />
         </div>

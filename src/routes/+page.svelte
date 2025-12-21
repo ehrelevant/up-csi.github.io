@@ -13,11 +13,12 @@
 <WhoWeAre />
 
 <section class="prose">
-    <h1 class="text-center font-normal transition-colors ease-in-out">Why UP CSI?</h1>
+    <h1 class="text-5xl text-center text-csi-blue-600 font-normal transition-colors ease-in-out">Why UP CSI?</h1>
     <div class="space-y-4">
         <CardContainer>
             {#snippet text()}
-                <p>For organizations</p>
+                <p class="text-3xl text-csi-blue-600">For organizations</p>
+                <hr class="border-t-2 border-csi-blue-600">
                 <h3 class="font-dm text-2xl font-normal sm:text-3xl">
                     We offer services catered to your specific software needs.
                 </h3>
@@ -31,7 +32,8 @@
         </CardContainer>
         <CardContainer>
             {#snippet text()}
-                <p>For students</p>
+                <p class="text-3xl text-csi-blue-600">For students</p>
+                <hr class="border-t-2 border-csi-blue-600">
                 <h3 class="font-dm text-2xl font-normal sm:text-3xl">
                     We enhance and upskill student abilities.
                 </h3>

@@ -1,6 +1,6 @@
 <script>
     import LinkButton from '$lib/components/buttons/LinkButton.svelte';
-    import src from '$lib/assets/lino/lino-sablay.svg';
+    import src from '$lib/assets/lino/lino-wingout.svg';
 </script>
 
 <div
@@ -10,7 +10,7 @@
         <img class="w-4/5 md:w-full" {src} alt="Placeholder" />
     </div>
     <div class="text-foreground flex w-full flex-col gap-6 px-2 md:w-1/2">
-        <h1 class="transition-colors ease-in-out">Who we are</h1>
+        <h1 class="text-5xl transition-colors ease-in-out">Who we are</h1>
         <p class="text-xl transition-colors ease-in-out md:text-2xl">
             We are a service-oriented organization aimed towards the enhancement of student learning
             from the University of the Philippines Diliman, Department of Computer Science by
